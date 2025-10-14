@@ -37,6 +37,7 @@ La figura presenta el esquema creado en donde los puertos son:
 
 ## Desde el servidor postgresl
 CREATE DATABASE info;
+
 \c info;
 
 CREATE TABLE personas (
@@ -49,11 +50,10 @@ INSERT INTO personas (nombre) VALUES
 ('Juan Pérez');
 
 ### Acceder al servidor
-docker exec -it contenedor-postgres psql -U admin -d info
 
 ### Conectarse a la base de datos info
 # COMPLETAR
-\c info
+docker exec -it contenedor-postgres psql -U admin -d info
 
 ### Realizar un select *from personas
 # AGREGAR UNA CAPTURA DE PANTALLA DEL RESULTADO
