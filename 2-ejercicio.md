@@ -1,5 +1,4 @@
 ### Crear contenedor de Postgres sin que exponga los puertos. Usar la imagen: postgres:15-alpine3.21
-# COMPLETAR
 docker network create mi_red_postgres
 
 docker run -d --name contenedor-postgres \
@@ -10,8 +9,6 @@ docker run -d --name contenedor-postgres \
 postgres:15-alpine3.21
 
 ### Crear un cliente de postgres. Usar la imagen: dpage/pgadmin4
-
-# COMPLETAR
 docker run -d --name cliente-pgadmin \
 -e PGADMIN_DEFAULT_EMAIL=admin@admin.com \
 -e PGADMIN_DEFAULT_PASSWORD=123456 \
@@ -38,8 +35,6 @@ La figura presenta el esquema creado en donde los puertos son:
 ## Desde el servidor postgresl
 CREATE DATABASE info;
 
-\c info;
-
 CREATE TABLE personas (
     id SERIAL PRIMARY KEY,
     nombre VARCHAR(100)
@@ -52,7 +47,6 @@ INSERT INTO personas (nombre) VALUES
 ### Acceder al servidor
 
 ### Conectarse a la base de datos info
-# COMPLETAR
 docker exec -it contenedor-postgres psql -U admin -d info
 
 ### Realizar un select *from personas
