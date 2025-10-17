@@ -1,5 +1,6 @@
 # Redes
-Las redes son un componente fundamental que permite la comunicación entre contenedores, así como la comunicación de los contenedores con el mundo exterior. 
+Las redes son un componente fundamental que permite la comunicación entre contenedores, así como la comunicación de los contenedores con el mundo exterior.
+
 ![Imagen](redes.PNG)
 - Bridge: Esta es la red por defecto en Docker. Permite la comunicación entre contenedores en el mismo host. Cada contenedor conectado a la red bridge tiene una IP propia en la subred de la red bridge.
     -  Brige por default: Cuando se ejecuta un contenedor, Docker crea automáticamente una red de tipo bridge por default. Esta red se utiliza para permitir la comunicación entre contenedores en el mismo host. Cada contenedor conectado a esta red obtiene su propia dirección IP en la subred de la red bridge.
@@ -49,8 +50,19 @@ docker network ls
 ![Imagen](esquema-ejercicio-redes.PNG)
 
 # COLOCAR UNA CAPTURA DE LAS REDES EXISTENTES CREADAS
+<img width="528" height="230" alt="image" src="https://github.com/user-attachments/assets/99321a98-596e-4c65-963b-5a0ffdf3794b" />
+
 
 # COLOCAR UNA(S) CAPTURAS(S) DE LOS CONTENEDORES CREADOS EN DONDE SE EVIDENCIE A QUÉ RED ESTÁN VINCULADOS
+docker network inspect net-curso01
+
+<img width="926" height="667" alt="image" src="https://github.com/user-attachments/assets/610b2bf6-b939-42cc-8fc7-5ca7170541c8" />
+
+docker network inspect net-curso02
+
+<img width="1047" height="361" alt="image" src="https://github.com/user-attachments/assets/a66e251d-6535-497a-9f52-2d2a0d450584" />
+
+
 
 ### Para eliminar las redes creadas
 ```
